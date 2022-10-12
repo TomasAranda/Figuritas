@@ -6,10 +6,10 @@ import retrofit2.http.GET
 
 interface FiguritasClient {
     @GET("")
-    suspend fun getFigurita() : FiguritaDto
+    suspend fun getFigurita(id: Int) : FiguritaDto
 
     companion object {
-        private const val BASE_URL = ""
+        private const val BASE_URL = "" // API URL
 
         fun create(): FiguritasClient {
             return Retrofit.Builder()
